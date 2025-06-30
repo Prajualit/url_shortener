@@ -84,9 +84,6 @@ func RootPageURL(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	fmt.Println("started")
-	originalURL := "https://example.com/some/long/"
-	shortURL := createUrl(originalURL)
-	fmt.Println("Shortened URL:", shortURL)
 
 	http.HandleFunc("/", RootPageURL)
 	http.HandleFunc("/shorten", ShortURLHandler)
